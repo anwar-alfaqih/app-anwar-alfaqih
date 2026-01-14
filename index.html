@@ -24,6 +24,10 @@
     <meta content='https://www.facebook.com/share/1D21xnuwii/' property='article:author'>
     <meta content='https://www.facebook.com/share/1D21xnuwii/' property='article:publisher'>
     <title>تطبيق الرقية الشرعية</title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
     <!--
     # Date of establishment  : 14/01/2026
@@ -153,7 +157,7 @@
 
 <div class="container">
     <div class="app-card">
-        <img src="icon-512.png" alt="App Icon" class="app-icon">
+        <img src="icons/icon-512.png" alt="App Icon" class="app-icon">
         <div class="app-title">رقية شرعية </div>
         <div class="app-category">التطبيق يحتوي على اذكار الصباح والمساء وأذكار النوم و الرقية الشرعية كاملة و القرآن الكريم </div>
         <a href="https://drive.google.com/file/d/1_ujVd_NDG9DPclz_Wud6l4KKMCk8d4FF/view?usp=drivesdk" class="download-btn">تحميل من قوقل درايف</a>
@@ -176,6 +180,15 @@
     document.addEventListener('keydown', function(e) { if (e.ctrlKey && (e.key === 'c' || e.key === 'u' || e.key === 's' || e.key === 'p')) { alert("عذراً، النسخ غير مسموح في هذا المتجر لحماية المحتوى."); e.preventDefault(); } 
 if (e.key === "F12") { e.preventDefault(); } }); document.addEventListener('contextmenu', function(e) { e.preventDefault(); alert("خطأ"); });
     document.getElementById('year').textContent = new Date().getFullYear();
+
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js')
+                    .then(reg => console.log('Service Worker Registered'))
+                    .catch(err => console.log('Service Worker Failed', err));
+            });
+        }
+
 </script>
 
 </body>

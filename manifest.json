@@ -1,0 +1,21 @@
+{
+  "name": "تطبيق الأذكار و الرقية الشرعية ",
+  "short_name": "تطبيق الأذكار و الرقية الشرعية ",
+  "description": "التطبيق يحتوي على اذكار الصباح والمساء وأذكار النوم و الرقية الشرعية كاملة و القرآن الكريم",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#0f171e",
+  "theme_color": "#fca311",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
