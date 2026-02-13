@@ -1,4 +1,4 @@
-const CACHE_NAME = 'app-anwar-alfaqih-v3';
+const CACHE_NAME = 'app-anwar-alfaqih-v1';
 const ASSETS_TO_CACHE = [
   './index.html',
   'https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap',
